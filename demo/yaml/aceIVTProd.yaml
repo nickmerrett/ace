@@ -1,0 +1,40 @@
+apiVersion: appconnect.ibm.com/v1beta1
+kind: IntegrationServer
+metadata:
+  name: car-repair-claim-prod
+  namespace: cp4i
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+spec:
+  pod:
+    containers:
+      runtime:
+        resources:
+          limits:
+            cpu: 2
+            memory: 2Gi
+          requests:
+            cpu: 1
+            memory: 1Gi
+  version: '12.0'
+  imagePullSecrets:
+    name: default-dockercfg-kjxtv
+  license:
+    accept: true
+    license: L-KSBM-C87FU2
+    use: AppConnectEnterpriseProduction
+  useCommonServices: true
+  enableMetrics: true
+  replicas: 1
+  barURL: >-
+    https://github.ibm.com/anz-tech-garage/ACE-cp4i-demonstrators/ace/demo/ace/binary/Car_Insurance_API_Lab_Short_V3.bar
+  service:
+    endpointType: http
+  designerFlowsOperationMode: disabled
+  adminServerSecure: false
+  tracing:
+    enabled: true
+    namespace: cp4i 
+  logFormat: basic
+  configurations: ["github-bar-auth"]
+
