@@ -1,4 +1,4 @@
-oc project ace
+#!/bin/bash
 
 set -e
 set tw=0
