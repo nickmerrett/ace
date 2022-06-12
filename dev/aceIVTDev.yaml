@@ -27,7 +27,7 @@ spec:
   enableMetrics: true
   replicas: 1
   barURL: >-
-    https://github.ibm.com/anz-tech-garage/ACE-cp4i-demonstrators/ace/demo/ace/binary/Car_Insurance_API_Lab_Short_V3.bar
+    https://raw.githubusercontent.com/nickmerrett/ace/main/bar/Car_Insurance_API_Lab_Short_V3.bar
   service:
     endpointType: http
   designerFlowsOperationMode: disabled
