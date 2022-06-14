@@ -56,6 +56,5 @@ spec:
   version: '12.0'
   replicas: 1
   barURL: >-
-    https://raw.githubusercontent.com/nickmerrett/ace/main/bar/Car_Insurance_API_Lab_Short_V3-nm.bar
-  configurations: ["github-bar-auth"]
-
+    https://raw.githubusercontent.com/nickmerrett/ace/main/bar/Car_Insurance_API_Lab_Short_V3.bar
+  configurations: ["github-bar-auth", "ace-designer-demo-designer-acc"]
